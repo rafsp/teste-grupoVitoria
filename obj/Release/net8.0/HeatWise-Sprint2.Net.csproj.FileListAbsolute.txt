@@ -232,3 +232,5 @@ C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main
 C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main\obj\Release\net8.0\HeatWise-Sprint2.Net.pdb
 C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main\obj\Release\net8.0\HeatWise-Sprint2.Net.genruntimeconfig.cache
 C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main\obj\Release\net8.0\ref\HeatWise-Sprint2.Net.dll
+C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main\bin\Release\net8.0\.filenesting.json
+C:\Users\Rafael\Downloads\Fiap_Entregas\New folder\HeatWiseSprintTeste_aula-main\obj\Release\net8.0\HeatWise-Sprint2.Net.sourcelink.json
