@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HeatWise-Sprint2.Net")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+584b46025b54c338717f36d288dd1bae36470b6d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+548d1f06c142cc1db02f30dda493ffc924ae70cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("HeatWise-Sprint2.Net")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HeatWise-Sprint2.Net")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

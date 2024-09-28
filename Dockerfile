@@ -24,4 +24,4 @@ RUN dotnet publish "./HeatWise-Sprint 2.Net.csproj" -c %BUILD_CONFIGURATION% -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "HeatWise-Sprint 2.Net.dll"]
+ENTRYPOINT ["dotnet", "HeatWise-Sprint2.Net.dll"]
