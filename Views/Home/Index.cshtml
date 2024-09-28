@@ -1,0 +1,846 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        :root {
+            --sun-50: rgba(255, 253, 234, 1);
+            --sun-100: rgba(255, 247, 197, 1);
+            --sun-200: rgba(255, 239, 133, 1);
+            --sun-300: rgba(255, 224, 70, 1);
+            --sun-400: rgba(255, 206, 27, 1);
+            --sun-500: rgba(255, 172, 0, 1);
+            --sun-600: rgba(255, 138, 0, 1);
+            --sun-700: rgba(187, 91, 2, 1);
+            --sun-800: rgba(152, 70, 8, 1);
+            --sun-900: rgba(124, 57, 11, 1);
+            --sun-950: rgba(72, 28, 0, 1);
+            --daisy-bush50: rgba(245, 242, 255, 1);
+            --daisy-bush100: rgba(237, 230, 255, 1);
+            --daisy-bush200: rgba(221, 209, 255, 1);
+            --daisy-bush300: rgba(197, 172, 255, 1);
+            --daisy-bush400: rgba(170, 126, 255, 1);
+            --daisy-bush500: rgba(146, 73, 255, 1);
+            --daisy-bush600: rgba(135, 36, 255, 1);
+            --daisy-bush700: rgba(121, 19, 238, 1);
+            --daisy-bush800: rgba(101, 15, 200, 1);
+            --daisy-bush900: rgba(87, 15, 169, 1);
+            --daisy-bush950: rgba(51, 6, 111, 1);
+        }
+
+        .landing-page {
+            background-color: #fffdea;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
+        }
+
+            .landing-page .div {
+                background-color: var(--sun-50);
+                overflow: hidden;
+                width: 1280px;
+                height: 4475px;
+                position: relative;
+            }
+
+            .landing-page .overlap {
+                position: absolute;
+                width: 1282px;
+                height: 1284px;
+                top: 0;
+                left: 0;
+            }
+
+            .landing-page .image {
+                position: absolute;
+                width: 100%;
+                height: 805px;
+                top: 0;
+                left: 0;
+                background-blend-mode: multiply;
+                object-fit: cover;
+            }
+
+            .landing-page .heatwisewl {
+                position: absolute;
+                width: 197px;
+                height: 46px;
+                top: 28px;
+                left: 28px;
+                object-fit: cover;
+            }
+
+            .landing-page .potencialize-a {
+                position: absolute;
+                width: 662px;
+                top: 108px;
+                left: 52px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: transparent;
+                font-size: 33px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .text-wrapper {
+                color: #fffdea;
+            }
+
+            .landing-page .span {
+                color: #ffac00;
+            }
+
+            .landing-page .boto-padro {
+                display: flex;
+                width: 227px;
+                height: 33px;
+                align-items: center;
+                justify-content: center;
+                gap: 4.88px;
+                padding: 15.13px 49.79px;
+                position: absolute;
+                top: 347px;
+                left: 52px;
+                background-color: var(--sun-500);
+                border-radius: 28.31px;
+                overflow: hidden;
+                box-shadow: inset 14.65px 14.65px 14.65px #ff7b00ab, inset -14.65px -14.65px 14.65px #ffd600bd;
+            }
+
+            .landing-page .bot-o {
+                position: relative;
+                width: fit-content;
+                margin-left: -23.29px;
+                margin-right: -23.29px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: var(--sun-50);
+                font-size: 20.2px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .boto-sem-fundo {
+                display: inline-flex;
+                align-items: flex-start;
+                position: absolute;
+                top: 29px;
+                right: 100px;
+            }
+
+            .landing-page .boto-sem-fundo2 {
+                display: inline-flex;
+                align-items: flex-start;
+                position: absolute;
+                top: 10%;
+                right: 100px;
+            }
+
+            .landing-page .bot-o-wrapper {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 3.91px;
+                padding: 12.11px 39.85px;
+                position: relative;
+                flex: 0 0 auto;
+                border-radius: 22.66px;
+                overflow: hidden;
+                border: 2.34px solid;
+                border-color: var(--sun-500);
+            }
+
+            .landing-page .bot-o-2 {
+                position: relative;
+                width: fit-content;
+                margin-top: -2.34px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: var(--sun-500);
+                font-size: 16.2px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .group {
+                position: absolute;
+                width: 100%;
+                height: 499px;
+                top: 785px;
+                left: 0;
+            }
+
+            .landing-page .group-footer {
+                width: 100%;
+                height: 499px;
+                top: 785px;
+                left: 0;
+            }
+
+            .landing-page .overlap-group {
+                position: relative;
+                width: 100%;
+                height: 499px;
+                background-color: var(--sun-500);
+                box-shadow: inset 0px 300px 250px #f68d2b;
+            }
+
+            .landing-page .p {
+                position: absolute;
+                width: 623px;
+                top: 164px;
+                left: 18%;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 25.3px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .ttulo {
+                position: absolute;
+                width: 192px;
+                height: 51px;
+                top: 70px;
+                left: 544px;
+            }
+
+            .landing-page .t-tulo {
+                width: 300px;
+                position: absolute;
+                top: -1px;
+                left: 1px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: var(--sun-50);
+                font-size: 40.8px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .full-length-happy {
+                position: absolute;
+                width: 437px;
+                height: 492px;
+                top: 7px;
+                left: 50%;
+                object-fit: cover;
+            }
+
+            .landing-page .group-2 {
+                position: absolute;
+                width: 100%;
+                height: 564px;
+                top: 1284px;
+                left: 0;
+                background-color: var(--sun-950);
+                box-shadow: inset 0px 200px 200px #f68d2b40;
+            }
+
+            .landing-page .ttulo-h {
+                position: absolute;
+                width: 192px;
+                height: 51px;
+                top: 51px;
+                left: 156px;
+            }
+
+            .landing-page .t-tulo-h {
+                width: 530px;
+                position: absolute;
+                top: -1px;
+                left: -98px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: var(--sun-50);
+                font-size: 40.8px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .group-3 {
+                position: absolute;
+                width: 100%;
+                height: 63px;
+                top: 153px;
+                left: 100px;
+            }
+
+            .landing-page .div-2 {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 33px;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: transparent;
+                font-size: 22px;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .ellipse {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                top: 22px;
+                left: 0;
+            }
+
+            .landing-page .group-4 {
+                position: absolute;
+                width: 100%;
+                height: 63px;
+                top: 274px;
+                left: 100px;
+            }
+
+            .landing-page .ellipse-2 {
+                background-color: var(--sun-50);
+                border-radius: 6px;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                top: 22px;
+                left: 0;
+            }
+
+            .landing-page .group-5 {
+                position: absolute;
+                width: 100%;
+                height: 63px;
+                top: 395px;
+                left: 100px;
+            }
+
+            .landing-page .overlap-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 508px;
+                top: 1848px;
+                left: 0;
+            }
+
+            .landing-page .overlap-2 {
+                position: relative;
+                width: 100%;
+                height: 508px;
+                background-color: var(--sun-500);
+            }
+
+            .landing-page .text-wrapper-2 {
+                position: absolute;
+                width: 100%;
+                top: 229px;
+                left: 100px;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 32.1px;
+                text-align: justify;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .t-tulo-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 51px;
+                top: 58px;
+                left: 544px;
+            }
+
+            .landing-page .t-tulo-2 {
+                position: absolute;
+                top: -1px;
+                left: -95px;
+                font-family: "Outfit-Bold", Helvetica;
+                font-weight: 700;
+                color: var(--sun-50);
+                font-size: 40.8px;
+                text-align: center;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .img {
+                position: absolute;
+                width: 374px;
+                height: 255px;
+                top: 152px;
+                right: 20%;
+            }
+
+            .landing-page .overlap-group-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 508px;
+                top: 2356px;
+                left: 0;
+            }
+
+            .landing-page .overlap-3 {
+                position: relative;
+                width: 100%;
+                height: 508px;
+                background-color: var(--sun-600);
+            }
+
+            .landing-page .text-wrapper-3 {
+                position: absolute;
+                width: 545px;
+                top: 174px;
+                right: 20%;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 32.1px;
+                text-align: justify;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .textvector {
+                position: absolute;
+                width: 336px;
+                height: 255px;
+                top: 127px;
+                left: 20%;
+                object-fit: cover;
+            }
+
+            .landing-page .div-wrapper {
+                position: absolute;
+                width: 100%;
+                height: 508px;
+                top: 2864px;
+                left: 0;
+            }
+
+            .landing-page .overlap-4 {
+                position: relative;
+                width: 100%;
+                height: 508px;
+                background-color: var(--sun-700);
+            }
+
+            .landing-page .text-wrapper-4 {
+                position: absolute;
+                width: 540px;
+                top: 196px;
+                left: 20%;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 32.1px;
+                text-align: justify;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .dashboardvector {
+                position: absolute;
+                width: 336px;
+                height: 255px;
+                top: 127px;
+                right: 20%;
+                object-fit: cover;
+            }
+
+            .landing-page .group-6 {
+                position: absolute;
+                width: 100%;
+                height: 661px;
+                top: 3372px;
+                left: 0;
+            }
+
+            .landing-page .overlap-5 {
+                position: relative;
+                width: 100%;
+                height: 661px;
+                background-color: var(--sun-950);
+            }
+
+            .landing-page .overlap-group-2 {
+                position: absolute;
+                width: 561px;
+                height: 141px;
+                top: 302px;
+                right: 20%;
+            }
+
+            .landing-page .e-adquira-j-a-mais {
+                position: absolute;
+                width: 561px;
+                top: 0;
+                left: 0;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 37.4px;
+                text-align: justify;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .cadastre-se {
+                position: absolute;
+                width: 213px;
+                height: 34px;
+                top: 10px;
+                left: 0;
+            }
+
+            .landing-page .gabriella-clare {
+                position: absolute;
+                width: 438px;
+                height: 657px;
+                top: 4px;
+                left: 20%;
+                object-fit: cover;
+            }
+
+            .landing-page .text-wrapper-5 {
+                position: absolute;
+                top: 160px;
+                right: 22%;
+                font-family: "Outfit-SemiBold", Helvetica;
+                font-weight: 600;
+                color: var(--sun-50);
+                font-size: 46.6px;
+                text-align: justify;
+                letter-spacing: 0;
+                line-height: normal;
+            }
+
+            .landing-page .footer {
+                position: absolute;
+                width: 100%;
+                height: 442px;
+                top: 4033px;
+                left: 0;
+                background-color: transparent;
+                background-image: url(./img/group-22.png);
+                background-size: 100% 100%;
+            }
+
+            .landing-page .plusoftlogo {
+                position: absolute;
+                width: 408px;
+                height: 103px;
+                top: 180px;
+                left: 17%;
+                object-fit: cover;
+            }
+
+        .group-child {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            box-shadow: 0px 100px 100px #f68d2b inset;
+            background-color: #ffac00;
+        }
+
+        .heatwise-todos-os {
+            position: absolute;
+            height: 29.41%;
+            width: 41.25%;
+            top: 72%;
+            left: 53.98%;
+            display: inline-block;
+            text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+        }
+
+        .projeto-sugerido-e {
+            position: absolute;
+            height: 5.88%;
+            width: 26.09%;
+            top: 23.3%;
+            left: 13.13%;
+            display: inline-block;
+            text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+        }
+
+        .fiap-white-1-1-icon {
+            position: absolute;
+            height: 15.61%;
+            top: 66.52%;
+            right: 63.83%;
+            bottom: 17.87%;
+            left: 15%;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .group-item {
+            position: absolute;
+            height: 78.73%;
+            width: 0.23%;
+            top: 9.95%;
+            right: 49.77%;
+            bottom: 11.31%;
+            left: 50%;
+            border-right: 3px solid #fffdea;
+            box-sizing: border-box;
+        }
+
+        .integrantes-do-grupo-breno {
+            margin: 0;
+        }
+
+        .integrantes-do-grupo-breno-container {
+            position: absolute;
+            height: 59.05%;
+            width: 41.56%;
+            top: 10.84%;
+            left: 53.98%;
+            text-align: left;
+            display: inline-block;
+            text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+        }
+
+        .fbio-almeida{
+            margin:10px;
+        }
+
+        .group-parent3 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25) inset);
+        }
+
+        .group-child2 {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            box-shadow: 0px 100px 100px #f68d2b inset;
+            background-color: #ffac00;
+        }
+
+
+        .rectangle-parent {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+        }
+
+        .medicalogo-2 {
+            position: absolute;
+            height: 15.84%;
+            width: 36.25%;
+            top: 38.01%;
+            right: 55.7%;
+            bottom: 46.15%;
+            left: 8.05%;
+        }
+
+        .group-parent {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
+            filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25) inset);
+        }
+
+        .plusoftlogo-1-icon {
+            position: absolute;
+            height: 23.3%;
+            top: 37.33%;
+            right: 57.88%;
+            bottom: 39.37%;
+            left: 10.23%;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
+            width: 100%;
+            position: relative;
+            height: 442px;
+            text-align: justify;
+            font-size: 21.63px;
+            color: #fffdea;
+            font-family: ABeeZee;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+
+        <img class="image" src="landingpage-bg.png" />
+        <img class="heatwisewl" src="HeatWise.png" />
+        <p class="potencialize-a">
+            <span class="text-wrapper">Potencialize a Experiência de seus funcionários. Transformando </span>
+            <span class="span">Dados</span>
+            <span class="text-wrapper"> em </span>
+            <span class="span">Insights</span>
+            <span class="text-wrapper"> e melhorando sua Plataforma Digital!</span>
+        </p>
+        <a class="boto-padro" asp-controller="Planos" asp-action="Index"><div class="bot-o">Veja nossos planos</div></a>
+        <a class="boto-sem-fundo" asp-controller="Empresas" asp-action="Create">
+            <div class="bot-o-wrapper"><div class="bot-o-2">CADASTRAR</div></div>
+        </a>
+        <div class="group">
+            <div class="overlap-group">
+                <p class="p">
+                    Transformamos dados em insights valiosos para melhorar a experiência em suas plataformas digitais. Com
+                    nossa tecnologia avançada de análise de dados e feedback funcional, capacitamos as empresas a entender e
+                    otimizar a jornada dos funcionários, impulsionando a eficiência e a produtividade
+                </p>
+                <div class="ttulo"><div class="t-tulo">Sobre Nós</div></div>
+                <img class="full-length-happy"
+                     src="sobrenos.png" />
+            </div>
+        </div>
+
+        <div class="group-2">
+            <div class="ttulo-h"><div class="t-tulo-h">Benefícios Principais</div></div>
+            <div class="group-3">
+                <p class="div-2">
+                    <span class="text-wrapper">
+                        Melhoria da Experiência do Funcionário - Identifique áreas de oportunidade para aprimorar a
+                    </span>
+                    <span class="span">usabilidade </span>
+                    <span class="text-wrapper">e </span>
+                    <span class="span">eficiência</span>
+                    <span class="text-wrapper"> da plataforma.</span>
+                </p>
+
+            </div>
+            <div class="group-4">
+                <p class="div-2">
+                    <span class="text-wrapper">
+                        Otimização de Processos Internos - Personalize estratégias de desenvolvimento com base no
+                    </span>
+                    <span class="span">comportamento</span>
+                    <span class="text-wrapper"> e </span>
+                    <span class="span">necessidades reais</span>
+                    <span class="text-wrapper"> dos funcionários.</span>
+                </p>
+                <div class="ellipse-2"></div>
+            </div>
+            <div class="group-5">
+                <p class="div-2">
+                    <span class="text-wrapper">Tomada de Decisão Baseada em Dados - Transforme dados em </span>
+                    <span class="span">insights acionáveis</span>
+                    <span class="text-wrapper"> para impulsionar o desempenho e o sucesso da equipe.</span>
+                </p>
+                <div class="ellipse-2"></div>
+            </div>
+        </div>
+        <div class="overlap-wrapper">
+            <div class="overlap-2">
+                <p class="text-wrapper-2">Nossa plataforma irá gerar mapas de calor com base em seu site</p>
+                <div class="t-tulo-wrapper"><div class="t-tulo-2">Mas como funciona?</div></div>
+                <img class="img" src="como-funciona.png" />
+            </div>
+        </div>
+        <div class="overlap-group-wrapper">
+            <div class="overlap-3">
+                <p class="text-wrapper-3">
+                    Então, nossa ia generativa irá confeccionar um relatório apontando insights valiosos e um feedback de sua
+                    plataforma
+                </p>
+                <img class="textvector" src="ia-generativa.png" />
+            </div>
+        </div>
+        <div class="div-wrapper">
+            <div class="overlap-4">
+                <p class="text-wrapper-4">
+                    Por fim, você poderá ver este relatório de forma mais precisa através de nosso dashboard
+                </p>
+                <img class="dashboardvector" src="dashboard.png" />
+            </div>
+        </div>
+        <div class="group-6">
+            <div class="overlap-5">
+                <div class="overlap-group-2">
+                    <p class="e-adquira-j-a-mais">
+                        <span class="span">Cadastre-se</span> e
+                        adquira já a mais nova solução de heatmapping no mercado!
+                    </p>
+
+                </div>
+                <img class="gabriella-clare" src="Pessoa.png" />
+                <div class="text-wrapper-5">Tá esperando o que?</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="group-parent3">
+                <div class="rectangle-parent">
+                    <div class="group-child2">
+                    </div>
+                    <div class="heatwise-todos-os">© 2024 HeatWise. Todos os direitos reservados. A melhor plataforma de análise de acesso em websites, promovendo o avanço e estudo de dados através da tecnologia de Heat Mapping.</div>
+                    <div class="projeto-sugerido-e">Projeto sugerido e apoiado por:</div>
+                    <img class="fiap-white-1-1-icon" alt="" src="FIAP.png">
+
+                    <div class="group-child3">
+                    </div>
+                    <div class="integrantes-do-grupo-breno-container">
+                        <p class="fbio-almeida">
+                            INTEGRANTES DO GRUPO
+                        </p>
+                        <br />
+                        <p class="fbio-almeida">Breno Lemes Santiago - RM: 552270</p>
+                        <p class="fbio-almeida">Felipe Guedes Gonçalves - RM: 550906</p>
+                        <p class="fbio-almeida">Luiz Fellipe Soares de Sousa Lucena - RM: 551365</p>
+                        <p class="fbio-almeida">Nina Rebello Francisco - RM: 99509</p>
+                        <p class="fbio-almeida">Vitória Maria de Camargo - RM: 552344</p>
+                    </div>
+                </div>
+                <div class="medicalogo-2">
+                </div>
+            </div>
+            <img class="plusoftlogo-1-icon" alt="" src="plusoft-logo.png">
+
+        </div>
+    </div>
+</body>
+</html>

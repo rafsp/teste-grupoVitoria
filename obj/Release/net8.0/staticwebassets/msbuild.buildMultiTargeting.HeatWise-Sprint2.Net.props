@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HeatWise-Sprint2.Net.props" />
+</Project>

@@ -1,0 +1,1502 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=ABeeZee:wght@400&display=swap" />
+</head>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .dashboard1 {
+        position: absolute;
+        top: 161px;
+        left: 44%;
+        font-size: 52.39px;
+        font-weight: 600;
+        color: #ffa800;
+        display: inline-block;
+        width: 266px;
+        height: 55.6px;
+    }
+
+    .graph-4-child {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border-radius: 10px;
+        background-color: #fff;
+        width: 276px;
+        height: 340px;
+    }
+
+    .b {
+        position: absolute;
+        top: 73.15px;
+        left: 22.2px;
+    }
+
+    .mon {
+        position: absolute;
+        top: 55.03px;
+        left: 17.57px;
+        color: #939393;
+    }
+
+    .today {
+        position: relative;
+    }
+
+    .today-parent {
+        position: absolute;
+        top: 282.55px;
+        left: 15.74px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px;
+        gap: 166px;
+        font-size: 12px;
+    }
+
+    .melhor-parent {
+        position: absolute;
+        top: 248px;
+        left: 16px;
+        border-bottom: 1px solid #b1b1b1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px;
+        gap: 152px;
+        font-size: 12px;
+    }
+
+    .b1 {
+        position: absolute;
+        top: 73.15px;
+        left: 65.82px;
+    }
+
+    .tue {
+        position: absolute;
+        top: 55.03px;
+        left: 63.57px;
+        color: #939393;
+    }
+
+    .b2 {
+        position: absolute;
+        top: 73.15px;
+        left: 107.44px;
+    }
+
+    .wed {
+        position: absolute;
+        top: 55.03px;
+        left: 106.57px;
+        color: #939393;
+    }
+
+    .b3 {
+        position: absolute;
+        top: 73.15px;
+        left: 151.05px;
+    }
+
+    .thu {
+        position: absolute;
+        top: 55.03px;
+        left: 153.57px;
+        color: #939393;
+    }
+
+    .b4 {
+        position: absolute;
+        top: 73.15px;
+        left: 194.67px;
+    }
+
+    .fri {
+        position: absolute;
+        top: 55.03px;
+        left: 197.57px;
+        color: #939393;
+    }
+
+    .b5 {
+        position: absolute;
+        top: 73.15px;
+        left: 238.29px;
+    }
+
+    .sat {
+        position: absolute;
+        top: 55.03px;
+        left: 234.57px;
+        color: #939393;
+    }
+
+    .graph-4-item {
+        position: absolute;
+        top: 104.86px;
+        left: 27.49px;
+        border-right: 0.5px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+        opacity: 0.5;
+    }
+
+    .graph-4-inner {
+        position: absolute;
+        top: 104.86px;
+        left: 156.8px;
+        border-right: 0.5px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+        opacity: 0.5;
+    }
+
+    .line-div {
+        position: absolute;
+        top: 104.86px;
+        left: 71.64px;
+        border-right: 0.5px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+        opacity: 0.5;
+    }
+
+    .graph-4-child1 {
+        position: absolute;
+        top: 104.86px;
+        left: 200.95px;
+        border-right: 0.5px solid #001dff;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+    }
+
+    .graph-4-child2 {
+        position: absolute;
+        top: 104.86px;
+        left: 115.78px;
+        border-right: 0.5px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+        opacity: 0.5;
+    }
+
+    .graph-4-child3 {
+        position: absolute;
+        top: 104.86px;
+        left: 245.09px;
+        border-right: 0.5px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 0.5px;
+        height: 142.9px;
+        opacity: 0.5;
+    }
+
+    .performance-geral {
+        position: absolute;
+        top: 23px;
+        left: 84px;
+        font-size: 12px;
+    }
+
+    .vector-icon {
+        position: absolute;
+        top: 121.49px;
+        left: 16.5px;
+        width: 212px;
+        height: 124.5px;
+    }
+
+    .graph-4-child4 {
+        position: absolute;
+        top: 121.49px;
+        left: 16.5px;
+        width: 212px;
+        height: 37.2px;
+    }
+
+    .ellipse-div {
+        position: absolute;
+        top: 85.14px;
+        left: 199.75px;
+        border-radius: 50%;
+        background-color: #344bfd;
+        width: 3.3px;
+        height: 3.3px;
+    }
+
+    .rectangle-div {
+        position: absolute;
+        top: 99.52px;
+        left: 131px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        background-color: #fff;
+        width: 129.8px;
+        height: 18.4px;
+    }
+
+    .maior-produo-hoje {
+        position: absolute;
+        top: 103px;
+        left: 146px;
+        color: #344bfd;
+    }
+
+    .graph-4 {
+        position: absolute;
+        top: 313px;
+        left: 22%;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        width: 276px;
+        height: 340px;
+        font-size: 10px;
+        color: #2e2e30;
+        font-family: Inter;
+    }
+
+    .frame-child {
+        width: 10px;
+        position: relative;
+        height: 10px;
+    }
+
+    .group-parent {
+        position: absolute;
+        top: 249.4px;
+        left: 21.41px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .group-container {
+        position: absolute;
+        top: 308px;
+        left: calc(50% - 117px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .group-child {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 170.6px;
+        height: 170.6px;
+    }
+
+    .group-item {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        background-color: #eceaf8;
+        width: 31.5px;
+        height: 31.5px;
+    }
+
+    .b6 {
+        position: absolute;
+        top: 8.75px;
+        left: 4.75px;
+    }
+
+    .ellipse-parent {
+        position: absolute;
+        top: 17.07px;
+        left: 134.31px;
+        width: 31.5px;
+        height: 31.5px;
+    }
+
+    .ellipse-group {
+        position: absolute;
+        top: 7.65px;
+        left: 12.71px;
+        width: 31.5px;
+        height: 31.5px;
+    }
+
+    .ellipse-container {
+        position: absolute;
+        top: 136.42px;
+        left: 22.21px;
+        width: 31.5px;
+        height: 31.5px;
+    }
+
+    .group-div {
+        position: absolute;
+        top: 60.49px;
+        left: 52.7px;
+        width: 170.6px;
+        height: 170.6px;
+        font-size: 10px;
+        color: #000;
+    }
+
+    .flat-color-iconsnext {
+        position: absolute;
+        top: 21.91px;
+        left: 5.41px;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+    }
+
+    .flat-color-iconsnext1 {
+        position: absolute;
+        top: 21.91px;
+        left: 247.41px;
+        width: 16px;
+        height: 16px;
+        overflow: hidden;
+        object-fit: contain;
+    }
+
+    .funes-mais-utilizadas {
+        position: absolute;
+        top: 23px;
+        left: 53px;
+        color: #2e2e30;
+    }
+
+    .frame-div {
+        position: absolute;
+        top: 279.85px;
+        left: 21.41px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .b9 {
+        position: absolute;
+        top: 310.31px;
+        left: 228.37px;
+        color: #404040;
+    }
+
+    .b10 {
+        position: absolute;
+        top: 279.85px;
+        left: 228.37px;
+        color: #404040;
+    }
+
+    .b11 {
+        position: absolute;
+        top: 249.4px;
+        left: 228.37px;
+        color: #404040;
+    }
+
+    .graph-19 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        width: 276px;
+        height: 340px;
+    }
+
+    .graph-19-wrapper {
+        position: absolute;
+        top: 313px;
+        left: 43.5%;
+        width: 276px;
+        height: 340px;
+        font-size: 12px;
+        color: #767676;
+        font-family: Inter;
+    }
+
+    .group-parent1 {
+        position: absolute;
+        top: 281.86px;
+        left: 35.83px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .group-parent2 {
+        position: absolute;
+        top: 281.86px;
+        left: 144.17px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .graph-21-item {
+        position: absolute;
+        top: 64.4px;
+        left: 44.67px;
+        width: 186.7px;
+        height: 186.7px;
+    }
+
+    .funes-utilizadas-hoje {
+        width: 221px;
+        position: relative;
+        display: inline-block;
+        flex-shrink: 0;
+    }
+
+    .funes-utilizadas-hoje-wrapper {
+        position: absolute;
+        top: 24px;
+        left: 27px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: center;
+        font-size: 14px;
+        color: #2e2e30;
+    }
+
+    .b12 {
+        position: absolute;
+        top: 157.74px;
+        left: 108px;
+        font-size: 30px;
+        color: #404040;
+    }
+
+    .graph-21 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        width: 276px;
+        height: 340px;
+        color: #767676;
+    }
+
+    .b13 {
+        position: absolute;
+        top: 297px;
+        left: 159px;
+    }
+
+    .b14 {
+        position: absolute;
+        top: 297px;
+        left: 51px;
+    }
+
+    .graph-21-parent {
+        position: absolute;
+        top: 313px;
+        left: 65%;
+        width: 276px;
+        height: 340px;
+        font-size: 12px;
+        color: #404040;
+        font-family: Inter;
+    }
+
+    .pagar-funcionrio {
+        color: #f68d2b;
+    }
+
+    .hoje-56-usurios-container {
+        position: absolute;
+        top: 1403px;
+        left: 24%;
+        font-weight: 500;
+        display: inline-block;
+        width: 1056px;
+    }
+
+    .dos-usurios-que-container {
+        position: absolute;
+        top: 1848px;
+        left: 22%;
+        font-weight: 500;
+        display: inline-block;
+        width: 1065px;
+    }
+
+    .funcionrios-com-mais-container {
+        position: absolute;
+        top: 2054px;
+        left: 22%;
+        font-weight: 500;
+        display: inline-block;
+        width: 1068px;
+    }
+
+    .o-tempo-mdio-container {
+        position: absolute;
+        top: 2230px;
+        left: 22%;
+        font-weight: 500;
+        display: inline-block;
+        width: 1065px;
+    }
+
+    .insights-valiosos {
+        position: absolute;
+        top: 1321px;
+        left: 45%;
+        font-size: 33.34px;
+        font-weight: 600;
+    }
+
+    .name-image-child {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 30px;
+        background-color: #fff;
+        width: 335.5px;
+        height: 89.7px;
+    }
+
+    .sarah-cooker-img {
+        position: absolute;
+        top: 9.07px;
+        left: 8.06px;
+        border-radius: 24px;
+        width: 70.5px;
+        height: 70.5px;
+        object-fit: cover;
+    }
+
+    .fbio-almeida {
+        margin: 0;
+    }
+
+    .fbio-almeida-re-container1 {
+        width: 100%;
+    }
+
+    .fbio-almeida-re-container {
+        position: absolute;
+        top: 40.29px;
+        left: 95.37px;
+        display: flex;
+        align-items: center;
+        width: 205.5px;
+        height: 9.1px;
+    }
+
+    .name-image {
+        position: absolute;
+        top: 1500.65px;
+        left: 22%;
+        width: 335.5px;
+        height: 89.7px;
+        font-size: 18.42px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .name-image1 {
+        position: absolute;
+        top: 1500.65px;
+        left: 42%;
+        width: 335.5px;
+        height: 89.7px;
+        font-size: 18.42px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .name-image2 {
+        position: absolute;
+        top: 1500.65px;
+        left: 62%;
+        width: 335.5px;
+        height: 89.7px;
+        font-size: 18.42px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .name-image3 {
+        position: absolute;
+        top: 1620.56px;
+        left: 22%;
+        width: 335.5px;
+        height: 89.7px;
+        font-size: 18.42px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+
+    .dashboard-child {
+        position: absolute;
+        top: 1767.75px;
+        left: 22%;
+        border-top: 0.5px solid #000;
+        box-sizing: border-box;
+        width: 55%;
+        height: 0.5px;
+    }
+
+    .dashboard-item {
+        position: absolute;
+        top: 1979.75px;
+        left: 22%;
+        border-top: 0.5px solid #000;
+        box-sizing: border-box;
+        width: 55%;
+        height: 0.5px;
+    }
+
+    .dashboard-inner {
+        position: absolute;
+        top: 2155.75px;
+        left: 22%;
+        border-top: 0.5px solid #000;
+        box-sizing: border-box;
+        width: 55%;
+        height: 0.5px;
+    }
+
+    .dashboard-child1 {
+        position: absolute;
+        top: 2359.75px;
+        left: 22%;
+        border-top: 0.5px solid #000;
+        box-sizing: border-box;
+        width: 55%;
+        height: 0.5px;
+    }
+
+    .navbar-child {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        box-shadow: 0px 40px 40px #f68d2b inset;
+        background-color: #ffac00;
+    }
+
+    .image-removebg-preview-10-1 {
+        position: absolute;
+        height: 42.3%;
+        top: 29%;
+        right: 83.36%;
+        bottom: 28.7%;
+        left: 2.42%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .dashboard3 {
+        position: absolute;
+        height: 20%;
+        width: 8.28%;
+        top: 40%;
+        left: 28.13%;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    .relatrio {
+        position: absolute;
+        height: 20%;
+        width: 7.03%;
+        top: 40%;
+        left: 47.89%;
+        font-weight: 600;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .mapa-de-calor {
+        position: absolute;
+        height: 20%;
+        width: 10.63%;
+        top: 40%;
+        left: 66.41%;
+        font-weight: 600;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .como-usar {
+        position: absolute;
+        height: 20%;
+        width: 8.28%;
+        top: 40%;
+        left: 88.52%;
+        font-weight: 600;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100px;
+        font-size: 20px;
+        color: #fffdea;
+    }
+
+    .mdia-mensal-de {
+        position: relative;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+
+    .legend {
+        width: 12px;
+        height: 0px;
+    }
+
+    .top {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .axisitem-child {
+        width: 12px;
+        position: relative;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .axisitem {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .y-axis-items {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0px 0px 10px;
+    }
+
+    .y-axis-line {
+        align-self: stretch;
+        width: 1px;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .left-side-y-axis {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0px 0px 28px;
+    }
+
+    .two-lines-icon {
+        align-self: stretch;
+        flex: 1;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .line-graph {
+        align-self: stretch;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .x-axis-line {
+        align-self: stretch;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+    }
+
+    .axisitem-child8 {
+        width: 1px;
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        height: 10px;
+        flex-shrink: 0;
+    }
+
+    .axisitem10 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .x-axis {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .right-side-graph-and-x-axis {
+        align-self: stretch;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .graph {
+        align-self: stretch;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-start;
+        color: #949494;
+    }
+
+    .example2 {
+        position: absolute;
+        top: 713px;
+        left: 22%;
+        border-radius: 8px;
+        background-color: #fff;
+        border: 1px solid #b1b1b1;
+        box-sizing: border-box;
+        width: 55%;
+        height: 486px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px;
+        gap: 40px;
+        text-align: center;
+        font-size: 11px;
+        font-family: Roboto;
+    }
+
+    .group-child2 {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        box-shadow: 0px 100px 100px #f68d2b inset;
+        background-color: #ffac00;
+    }
+
+    .heatwise-todos-os {
+        position: absolute;
+        height: 29.41%;
+        width: 41.25%;
+        top: 61.99%;
+        left: 53.98%;
+        display: inline-block;
+        text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+    }
+
+    .projeto-sugerido-e {
+        position: absolute;
+        height: 5.88%;
+        width: 26.09%;
+        top: 23.3%;
+        left: 13.13%;
+        display: inline-block;
+        text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+    }
+
+    .fiap-white-1-1-icon {
+        position: absolute;
+        height: 15.61%;
+        top: 66.52%;
+        right: 63.83%;
+        bottom: 17.87%;
+        left: 16.25%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .group-child3 {
+        position: absolute;
+        height: 78.73%;
+        width: 0.23%;
+        top: 9.95%;
+        right: 49.77%;
+        bottom: 11.31%;
+        left: 50%;
+        border-right: 3px solid #fffdea;
+        box-sizing: border-box;
+    }
+
+    .integrantes-do-grupo-breno-container {
+        position: absolute;
+        height: 59.05%;
+        width: 41.56%;
+        top: 15.84%;
+        left: 53.98%;
+        text-align: left;
+        display: inline-block;
+        text-shadow: 0.5px 0 0 #fffdea, 0 0.5px 0 #fffdea, -0.5px 0 0 #fffdea, 0 -0.5px 0 #fffdea;
+    }
+
+    .rectangle-parent {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+    }
+
+    .medicalogo-2 {
+        position: absolute;
+        height: 15.84%;
+        width: 36.25%;
+        top: 38.01%;
+        right: 55.7%;
+        bottom: 46.15%;
+        left: 8.05%;
+    }
+
+    .group-parent3 {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0%;
+        right: 0%;
+        bottom: 0%;
+        left: 0%;
+        filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25) inset);
+    }
+
+    .plusoftlogo-1-icon {
+        position: absolute;
+        height: 23.3%;
+        top: 37.33%;
+        right: 57.88%;
+        bottom: 39.37%;
+        left: 10.23%;
+        max-width: 100%;
+        overflow: hidden;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .footer {
+        position: absolute;
+        top: 2633px;
+        left: 0px;
+        width: 100%;
+        height: 442px;
+        text-align: justify;
+        font-size: 21.63px;
+        color: #fffdea;
+        font-family: ABeeZee;
+    }
+
+    .dashboard {
+        width: 100%;
+        position: relative;
+        background-color: #fff;
+        height: 3075px;
+        overflow: hidden;
+        text-align: left;
+        font-size: 22.9px;
+        color: #000;
+        font-family: Outfit;
+    }
+
+    .bot-o-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.84px;
+        padding: 11.89px 39.13px;
+        position: absolute;
+        flex: 0 0 auto;
+        border-radius: 22.25px;
+        overflow: hidden;
+        border: 2.3px solid;
+        border-color: #ffffff54;
+        background-color: var(--sun-500);
+        box-shadow: -7.3px -7.3px 7.34px rgba(255, 214, 0, 0.74) inset, 7.3px 7.3px 7.34px rgba(255, 123, 0, 0.67) inset;
+        right: 5%;
+        top: 25%;
+    }
+
+    .bot-o {
+        position: relative;
+        width: fit-content;
+        margin-top: -2.3px;
+        font-family: "Outfit-Bold", Helvetica;
+        font-weight: 700;
+        color: #fff;
+        font-size: 15.9px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+</style>
+<body>
+
+    <div class="dashboard">
+        <div class="dashboard1">
+            <p class="fbio-almeida">Dashboard</p>
+        </div>
+        <div class="graph-4">
+            <div class="graph-4-child">
+            </div>
+            <b class="b">10</b>
+            <b class="mon">Mon</b>
+            <div class="today-parent">
+                <b class="today">Today</b>
+                <b class="today">75h</b>
+            </div>
+            <div class="melhor-parent">
+                <b class="today">Melhor</b>
+                <b class="today">100h</b>
+            </div>
+            <b class="b1">11</b>
+            <b class="tue">Tue</b>
+            <b class="b2">12</b>
+            <b class="wed">Wed</b>
+            <b class="b3">13</b>
+            <b class="thu">Thu</b>
+            <b class="b4">14</b>
+            <b class="fri">Fri</b>
+            <b class="b5">15</b>
+            <b class="sat">Sat</b>
+            <div class="graph-4-item">
+            </div>
+            <div class="graph-4-inner">
+            </div>
+            <div class="line-div">
+            </div>
+            <div class="graph-4-child1">
+            </div>
+            <div class="graph-4-child2">
+            </div>
+            <div class="graph-4-child3">
+            </div>
+            <b class="performance-geral">Performance geral</b>
+            <img class="vector-icon" alt="" src="Vector 1.png">
+
+            <img class="graph-4-child4" alt="" src="Vector 2.svg">
+
+            <div class="ellipse-div">
+            </div>
+            <div class="rectangle-div">
+            </div>
+            <b class="maior-produo-hoje">maior produção hoje</b>
+        </div>
+        <div class="graph-19-wrapper">
+            <div class="graph-19">
+                <div class="graph-4-child">
+                </div>
+                <div class="group-parent">
+                    <img class="frame-child" alt="" src="Group 2.svg">
+
+                    <b class="today">Pagar funcionários</b>
+                </div>
+                <div class="group-container">
+                    <img class="frame-child" alt="" src="Group 2.svg">
+
+                    <b class="today">Marcar Reunião</b>
+                </div>
+                <div class="group-div">
+                    <img class="group-child" alt="" src="Group 12.png">
+
+                    <div class="ellipse-parent">
+                        <div class="group-item">
+                        </div>
+                        <b class="b6">20%</b>
+                    </div>
+                    <div class="ellipse-group">
+                        <div class="group-item">
+                        </div>
+                        <b class="b6">20%</b>
+                    </div>
+                    <div class="ellipse-container">
+                        <div class="group-item">
+                        </div>
+                        <b class="b6">60%</b>
+                    </div>
+                </div>
+                <img class="flat-color-iconsnext" alt="" src="flat-color-icons:next.svg">
+
+                <img class="flat-color-iconsnext1" alt="" src="flat-color-icons:next.png">
+
+                <b class="funes-mais-utilizadas">Funções mais utilizadas hoje</b>
+                <div class="frame-div">
+                    <img class="frame-child" alt="" src="Group 3.svg">
+
+                    <b class="today">Cadastrar funcionário</b>
+                </div>
+                <b class="b9">20%</b>
+                <b class="b10">20%</b>
+                <b class="b11">60%</b>
+            </div>
+        </div>
+        <div class="graph-21-parent">
+            <div class="graph-21">
+                <div class="graph-4-child">
+                </div>
+                <div class="group-parent1">
+                    <img class="frame-child" alt="" src="Group 2.svg">
+
+                    <b class="today">não utilizadas</b>
+                </div>
+                <div class="group-parent2">
+                    <img class="frame-child" alt="" src="Group 3.svg">
+
+                    <b class="today">utilizadas</b>
+                </div>
+                <img class="graph-21-item" alt="" src="Ellipse 18.png">
+
+                <div class="funes-utilizadas-hoje-wrapper">
+                    <b class="funes-utilizadas-hoje">Funções utilizadas hoje</b>
+                </div>
+                <b class="b12">80%</b>
+            </div>
+            <b class="b13">64</b>
+            <b class="b14">16</b>
+        </div>
+        <div class="hoje-56-usurios-container">
+            <span>Hoje, 56 usuários utilizaram a função </span>
+            <span class="pagar-funcionrio">Pagar funcionário</span>
+            <span> efetivamente, mas 4 dos usuários logados sequer abriram esta seção, sendo eles:</span>
+        </div>
+        <div class="dos-usurios-que-container">
+            <span>78% dos usuários que visitaram </span>
+            <span class="pagar-funcionrio">Avaliação de Desempenho</span>
+            <span> também acessaram </span>
+            <span class="pagar-funcionrio">Desenvolvimento Profissional</span>
+            <span> recentemente.</span>
+        </div>
+        <div class="funcionrios-com-mais-container">
+            <span>Funcionários com mais de três anos na empresa são os mais ativos na seção </span>
+            <span class="pagar-funcionrio">Sugestões de Melhoria</span>
+            <span>.</span>
+        </div>
+        <div class="o-tempo-mdio-container">
+            <span>O tempo médio de permanência na plataforma hoje foi de </span>
+            <span class="pagar-funcionrio">2 horas e 37 minutos</span>
+            <span>, 28 minutos a mais comparado ontem.</span>
+        </div>
+        <div class="insights-valiosos">Insights valiosos</div>
+        <div class="name-image">
+            <div class="name-image-child">
+            </div>
+            <img class="sarah-cooker-img" alt="" src="defaultimage1.png">
+
+            <div class="fbio-almeida-re-container">
+                <span class="fbio-almeida-re-container1">
+                    <p class="fbio-almeida">Fábio Almeida</p>
+                    <p class="fbio-almeida">RE: 00045</p>
+                </span>
+            </div>
+        </div>
+        <div class="name-image1">
+            <div class="name-image-child">
+            </div>
+            <img class="sarah-cooker-img" alt="" src="defaultimage1.png">
+
+            <div class="fbio-almeida-re-container">
+                <span class="fbio-almeida-re-container1">
+                    <p class="fbio-almeida">Rosangela Mendes</p>
+                    <p class="fbio-almeida">RE: 00002</p>
+                </span>
+            </div>
+        </div>
+        <div class="name-image2">
+            <div class="name-image-child">
+            </div>
+            <img class="sarah-cooker-img" alt="" src="defaultimage1.png">
+
+            <div class="fbio-almeida-re-container">
+                <span class="fbio-almeida-re-container1">
+                    <p class="fbio-almeida">Renan Rodrigues</p>
+                    <p class="fbio-almeida">RE: 00003</p>
+                </span>
+            </div>
+        </div>
+        <div class="name-image3">
+            <div class="name-image-child">
+            </div>
+            <img class="sarah-cooker-img" alt="" src="defaultimage1.png">
+
+            <div class="fbio-almeida-re-container">
+                <span class="fbio-almeida-re-container1">
+                    <p class="fbio-almeida">Amanda Freitas</p>
+                    <p class="fbio-almeida">RE: 00007</p>
+                </span>
+            </div>
+        </div>
+        <div class="dashboard-child">
+        </div>
+        <div class="dashboard-item">
+        </div>
+        <div class="dashboard-inner">
+        </div>
+        <div class="dashboard-child1">
+        </div>
+        <div class="navbar">
+            <div class="navbar-child">
+            </div>
+            <img class="image-removebg-preview-10-1" alt="" src="HeatWise.png">
+            <a class="bot-o-wrapper" asp-controller="Sites" asp-action="Details" asp-route-id="1"><div class="bot-o">Voltar</div></a>
+        </div>
+        <div class="example2">
+            <div class="top">
+                <div class="mdia-mensal-de">Média mensal de atividade na plataforma</div>
+                <div class="legend">
+                </div>
+            </div>
+            <div class="graph">
+                <div class="left-side-y-axis">
+                    <div class="y-axis-items">
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">100</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">90</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">80</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">70</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">60</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">50</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">40</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">30</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">20</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                        <div class="axisitem">
+                            <div class="mdia-mensal-de">10</div>
+                            <img class="axisitem-child" alt="" src="Vector 8.svg">
+
+                        </div>
+                    </div>
+                    <img class="y-axis-line" alt="" src="Y Axis Line.svg">
+
+                </div>
+                <div class="right-side-graph-and-x-axis">
+                    <div class="line-graph">
+                        <img class="two-lines-icon" alt="" src="Line Graph.png">
+
+                    </div>
+                    <div class="x-axis">
+                        <img class="x-axis-line" alt="" src="X Axis Line.svg">
+
+                        <div class="top">
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Jan</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Feb</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Mar</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Apr</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">May</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Jun</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Jul</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Aug</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Sep</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Oct</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Nov</div>
+                            </div>
+                            <div class="axisitem10">
+                                <img class="axisitem-child8" alt="" src="Vector 8.svg">
+
+                                <div class="mdia-mensal-de">Dec</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="group-parent3">
+                <div class="rectangle-parent">
+                    <div class="group-child2">
+                    </div>
+                    <div class="heatwise-todos-os">© 2024 HeatWise. Todos os direitos reservados. A melhor plataforma de análise de acesso em websites, promovendo o avanço e estudo de dados através da tecnologia de Heat Mapping.</div>
+                    <div class="projeto-sugerido-e">Projeto sugerido e apoiado por:</div>
+                    <img class="fiap-white-1-1-icon" alt="" src="FIAP.png">
+
+                    <div class="group-child3">
+                    </div>
+                    <div class="integrantes-do-grupo-breno-container">
+                        <p class="fbio-almeida">
+                            INTEGRANTES DO GRUPO
+                        </p>
+                        <br />
+                        <p class="fbio-almeida">Breno Lemes Santiago - RM: 552270</p>
+                        <p class="fbio-almeida">Felipe Guedes Gonçalves - RM: 550906</p>
+                        <p class="fbio-almeida">Luiz Fellipe Soares de Sousa Lucena - RM: 551365</p>
+                        <p class="fbio-almeida">Nina Rebello Francisco - RM: 99509</p>
+                        <p class="fbio-almeida">Vitória Maria de Camargo - RM: 552344</p>
+                    </div>
+                </div>
+                <div class="medicalogo-2">
+                </div>
+            </div>
+            <img class="plusoftlogo-1-icon" alt="" src="plusoft-logo.png">
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        var relatrioText = document.getElementById("relatrioText");
+        if (relatrioText) {
+            relatrioText.addEventListener("click", function (e) {
+                // Add your code here
+            });
+        }
+
+        var mapaDeCalor = document.getElementById("mapaDeCalor");
+        if (mapaDeCalor) {
+            mapaDeCalor.addEventListener("click", function (e) {
+                // Add your code here
+            });
+        }
+
+        var comoUsarText = document.getElementById("comoUsarText");
+        if (comoUsarText) {
+            comoUsarText.addEventListener("click", function (e) {
+                // Add your code here
+            });
+        }</script>
+</body>
+</html>

@@ -1,0 +1,1839 @@
+﻿@using HeatWise_Sprint_2.Net.Persistencia.Models
+@model HeatWise_Sprint_2.Net.Persistencia.Models.Empresa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./css/HeatWise.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" />
+</head>
+<style>
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    :root {
+        --sun-50: rgba(255, 253, 234, 1);
+        --sun-100: rgba(255, 247, 197, 1);
+        --sun-200: rgba(255, 239, 133, 1);
+        --sun-300: rgba(255, 224, 70, 1);
+        --sun-400: rgba(255, 206, 27, 1);
+        --sun-500: rgba(255, 172, 0, 1);
+        --sun-600: rgba(255, 138, 0, 1);
+        --sun-700: rgba(187, 91, 2, 1);
+        --sun-800: rgba(152, 70, 8, 1);
+        --sun-900: rgba(124, 57, 11, 1);
+        --sun-950: rgba(72, 28, 0, 1);
+        --daisy-bush50: rgba(245, 242, 255, 1);
+        --daisy-bush100: rgba(237, 230, 255, 1);
+        --daisy-bush200: rgba(221, 209, 255, 1);
+        --daisy-bush300: rgba(197, 172, 255, 1);
+        --daisy-bush400: rgba(170, 126, 255, 1);
+        --daisy-bush500: rgba(146, 73, 255, 1);
+        --daisy-bush600: rgba(135, 36, 255, 1);
+        --daisy-bush700: rgba(121, 19, 238, 1);
+        --daisy-bush800: rgba(101, 15, 200, 1);
+        --daisy-bush900: rgba(87, 15, 169, 1);
+        --daisy-bush950: rgba(51, 6, 111, 1);
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cadastro {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+        .cadastro .overlap-wrapper {
+            background-color: #ffffff;
+            overflow: hidden;
+            width: 1280px;
+            height: 832px;
+        }
+
+        .cadastro .overlap {
+            position: relative;
+            height: 832px;
+        }
+
+        .cadastro .rectangle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: var(--sun-500);
+            box-shadow: inset 0px 300px 190px #f68d2b;
+        }
+
+        .cadastro .text-wrapper {
+            position: absolute;
+            width: 45%;
+            top: 135px;
+            left: 77px;
+            font-family: "Outfit-Medium", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 43.1px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .cadastro .element-retrato-do {
+            position: absolute;
+            width: 384px;
+            height: 506px;
+            bottom: 0;
+            left: 20%;
+            object-fit: cover;
+        }
+
+        .cadastro .heatwisewl {
+            position: absolute;
+            width: 197px;
+            height: 46px;
+            top: 39px;
+            left: 42px;
+            object-fit: cover;
+        }
+
+        .cadastro .group {
+            position: absolute;
+            width: 500px;
+            height: 717px;
+            top: 10%;
+            right: 15%;
+        }
+
+        .cadastro .overlap-group {
+            position: relative;
+            height: 717px;
+        }
+
+        .cadastro .div {
+            position: absolute;
+            width: 447px;
+            height: 649px;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: inset 0px -100px 100px #ffffff80, 0px 0px 30px #ce711b;
+        }
+
+        .cadastro .step {
+            display: flex;
+            flex-direction: column;
+            width: 447px;
+            align-items: flex-start;
+            gap: 24.12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cadastro .space {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 39px;
+            padding: 24.12px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+            border-radius: 16px;
+            border: 0.75px solid;
+            border-color: #d57300;
+            position: absolute;
+            height: 649px;
+            top: 0;
+            left: 0;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: inset 0px -100px 100px #ffffff80, 0px 0px 30px #ce711b;
+        }
+
+        .cadastro .subhead {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.51px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .text-wrapper-2 {
+            position: relative;
+            align-self: stretch;
+            margin-top: -0.75px;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: #d57300;
+            font-size: 15.1px;
+            letter-spacing: 0;
+            line-height: 21.1px;
+        }
+
+        .cadastro .p {
+            margin: 7px;
+            position: relative;
+            align-self: stretch;
+            height: 30.21px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #d57300;
+            font-size: 9px;
+            letter-spacing: 0;
+            line-height: 12.1px;
+        }
+
+        .cadastro .field {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6.03px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .field-label {
+            position: relative;
+            align-self: stretch;
+            margin-top: -0.75px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #d57300;
+            font-size: 10.6px;
+            letter-spacing: 0;
+            line-height: 15.1px;
+        }
+
+        .cadastro .div-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .contents {
+            padding: 6.03px 12.06px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12.06px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .field-text {
+            position: relative;
+            flex: 1;
+            margin-top: -0.75px;
+            font-family: "Roboto-Regular", Helvetica;
+            font-weight: 400;
+            color: #d57300;
+            font-size: 13.6px;
+            letter-spacing: 0;
+            line-height: 21.1px;
+        }
+
+        .cadastro .line {
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            height: 1px;
+            margin-bottom: -0.25px;
+        }
+
+        .cadastro .text-wrapper-3 {
+            position: relative;
+            align-self: stretch;
+            height: 36.02px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #d57300;
+            font-size: 9px;
+            letter-spacing: 0;
+            line-height: 12.1px;
+        }
+
+        .cadastro .contents-2 {
+            padding: 6.03px 0px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12.06px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .icon {
+            position: relative;
+            width: 18.09px;
+            height: 18.09px;
+        }
+
+        .cadastro .text-wrapper-4 {
+            position: relative;
+            align-self: stretch;
+            height: 40.67px;
+            font-family: "Poppins-Light", Helvetica;
+            font-weight: 300;
+            color: #d57300;
+            font-size: 9px;
+            letter-spacing: 0;
+            line-height: 12.1px;
+        }
+
+        .cadastro .fields {
+            display: flex;
+            align-items: flex-start;
+            gap: 24.12px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .field-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6.03px;
+            position: relative;
+            flex: 1;
+            flex-grow: 1;
+        }
+
+        .cadastro .contents-3 {
+            padding: 6.03px 0px 6.03px 12.06px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12.06px;
+            position: relative;
+            align-self: stretch;
+            width: 100%;
+            flex: 0 0 auto;
+        }
+
+        .cadastro .secondary-button {
+            width: 188px;
+            height: 44px;
+            top: 10%;
+            align-items: center;
+            justify-content: center;
+            gap: 6.03px;
+            padding: 0px 18.09px 0px 24.12px;
+            position: relative;
+            border-radius: 14px;
+            border: 2px solid;
+            border-color: var(--sun-50);
+        }
+
+        .cadastro .label {
+            position: relative;
+            width: fit-content;
+            font-family: "Poppins-Bold", Helvetica;
+            font-weight: 700;
+            color: var(--sun-50);
+            font-size: 13px;
+            text-align: center;
+            letter-spacing: 0;
+            line-height: 18.1px;
+            white-space: nowrap;
+        }
+
+
+    .space {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 30px;
+        border-radius: 16px;
+        border: 1px solid #d57300;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .subhead {
+        width: 100%;
+    }
+
+    .text-wrapper-2 {
+        font-weight: 700;
+        color: #d57300;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .p {
+        font-weight: 300;
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .field-label {
+        font-weight: 400;
+        color: #d57300;
+        font-size: 14px;
+    }
+
+    .div-2 {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 18px;
+        text-shadow: 0 0 black;
+        color: #333;
+        font-family: 'Roboto';
+        box-sizing: border-box;
+    }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #d57300;
+            outline: none;
+        }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #fff;
+            color: #d57300;
+        }
+
+    button[type="submit2"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: transparent;
+        color: red font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        button[type="submit2"]:hover {
+            background-color: red;
+            color: #fff;
+        }
+
+    .cadastro .secondary-button.back-button {
+        border-color: red; /* Cor da borda vermelha */
+        left: 14%;
+    }
+
+    .macbook-air-1-child {
+        width: 100%;
+        height: calc(100% + 448px);
+        margin: 0 !important;
+        top: 832px;
+        right: 448px;
+        bottom: -1280px;
+        left: 0;
+        box-shadow: 0 300px 190px #f68d2b inset;
+        background-color: var(--sun-500);
+        transform-origin: 0 0;
+        overflow: auto;
+    }
+
+    .heatwisewl-1-icon {
+        height: 46px;
+        width: 197px;
+        position: relative;
+        object-fit: cover;
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        z-index: 1;
+    }
+
+    .ttulo-h11 {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .ttulo-h1 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 var(--padding-xl) 0;
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        z-index: 1;
+    }
+
+    .navigation,
+    .ttulo-h1-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+    }
+
+    .ttulo-h1-wrapper {
+        flex: 1;
+        flex-direction: column;
+        padding: 45px 0 0;
+        box-sizing: border-box;
+    }
+
+    .navigation {
+        width: 100%;
+        flex-direction: row;
+        gap: 92px;
+    }
+
+    .boto {
+        position: relative;
+        display: inline-block;
+        min-width: 46px;
+    }
+
+    .boto-sem-fundo-laranja1 {
+        flex: 1;
+        border-radius: 22.25px;
+        border: 2.3px solid var(--sun-400);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: var(--padding-4xs) 35px var(--padding-4xs) 39.1px;
+    }
+
+    .boto-sem-fundo-laranja {
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: flex-start;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .boto-sem-fundo-laranja,
+    .button-container,
+    .header {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .button-container {
+        width: 124.3px;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1px 0 0;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 15.9px;
+        color: var(--sun-400);
+    }
+
+    .header {
+        padding: 30px;
+        align-self: stretch;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        gap: var(--gap-xl);
+        text-align: center;
+        font-size: 46.7px;
+        color: var(--sun-50);
+        font-family: var(--font-outfit);
+    }
+
+    .defaultimage-1-icon {
+        height: 180px;
+        width: 180px;
+        position: relative;
+        border-radius: 23px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .boto1 {
+        position: relative;
+        font-size: var(--font-size-base-8);
+        display: inline-block;
+        font-family: var(--font-outfit);
+        color: var(--sun-50);
+        text-align: left;
+        min-width: 89px;
+    }
+
+    .boto-sem-fundo-laranja3 {
+        flex: 1;
+        border-radius: 22.17px;
+        border: 2.3px solid var(--sun-50);
+        overflow: hidden;
+        padding: var(--padding-4xs) var(--padding-18xl);
+    }
+
+    .boto-sem-fundo-laranja2,
+    .boto-sem-fundo-laranja3,
+    .button-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .boto-sem-fundo-laranja2 {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        flex: 1;
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        z-index: 1;
+    }
+
+    .button-row {
+        align-self: stretch;
+        padding: 0 2px 0 1.9px;
+    }
+
+    .boto2 {
+        position: relative;
+        font-size: var(--font-size-base-8);
+        display: inline-block;
+        font-family: var(--font-outfit);
+        color: var(--sun-50);
+        text-align: left;
+        min-width: 93px;
+    }
+
+    .boto-sem-fundo-laranja4,
+    .boto-sem-fundo-laranja5 {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .boto-sem-fundo-laranja5 {
+        flex: 1;
+        border-radius: 22.17px;
+        border: 2.3px solid var(--sun-50);
+        overflow: hidden;
+        padding: var(--padding-4xs) var(--padding-18xl);
+    }
+
+    .boto-sem-fundo-laranja4 {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+        align-self: stretch;
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        z-index: 1;
+    }
+
+    .button-row-parent,
+    .frame-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-row-parent {
+        align-self: stretch;
+        justify-content: flex-start;
+        gap: 21.1px;
+    }
+
+    .frame-wrapper {
+        flex: 1;
+        justify-content: flex-end;
+        padding: 0 0 11.5px;
+        box-sizing: border-box;
+        min-width: 111px;
+    }
+
+    .defaultimage-1-parent {
+        width: 371px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--gap-xl);
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        max-width: 100%;
+    }
+
+    .frame-child {
+        align-self: stretch;
+        width: 380.5px;
+        position: relative;
+        box-shadow: 0 0 27.57px #ce721c, 0-91.9px 91.91px rgba(255, 255, 255, 0.5) inset;
+        border-radius: 14.71px;
+        background-color: var(--color-white);
+        display: none;
+        max-width: 100%;
+    }
+
+    .meus-sites,
+    .preencha-com-base {
+        align-self: stretch;
+        position: relative;
+        font-size: var(--font-size-sm-9);
+        line-height: 20px;
+    }
+
+    .preencha-com-base {
+        height: 27.8px;
+        font-size: var(--font-size-4xs-3);
+        line-height: 11.08px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .field-label {
+        flex: 1;
+        position: relative;
+        line-height: 14px;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .site-label {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 3.8px;
+        box-sizing: border-box;
+        max-width: 100%;
+        font-size: var(--font-size-3xs-7);
+    }
+
+    .field-text {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .site-input {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 var(--padding-2xs);
+    }
+
+    .field-label1,
+    .line {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .line {
+        height: 0.7px;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .field-label1 {
+        font-size: var(--font-size-3xs-7);
+        line-height: 14px;
+        font-family: var(--font-poppins);
+    }
+
+    .site-field {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 5.6px;
+        gap: var(--gap-6xs-1);
+        font-family: var(--font-roboto);
+    }
+
+    .field-text1 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .action-button {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 var(--padding-2xs);
+    }
+
+    .boto3,
+    .line1 {
+        position: relative;
+    }
+
+    .line1 {
+        align-self: stretch;
+        height: 0.7px;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .boto3 {
+        font-size: 18px;
+        display: inline-block;
+        font-family: var(--font-outfit);
+        color: var(--sun-50);
+        text-align: left;
+        min-width: 74px;
+    }
+
+    .boto3-1 {
+        font-size: 18px;
+        display: inline-block;
+        font-family: var(--font-outfit);
+        color: var(--sun-50);
+        text-align: left;
+        min-width: 74px;
+    }
+
+    .boto-padro,
+    .site-action,
+    .sites-form {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .boto-padro {
+        cursor: pointer;
+        border: 0;
+        width: 90%;
+        height: 40px;
+        padding: 10px;
+        background-color: var(--sun-500);
+        box-shadow: -7.3px -7.3px 7.34px rgba(255, 214, 0, 0.74) inset, 7.3px 7.3px 7.34px rgba(255, 123, 0, 0.67) inset;
+        border-radius: 14.18px;
+        overflow: hidden;
+        flex-direction: row;
+        white-space: nowrap;
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+        .boto-padro:hover {
+            background-color: #cc7a00;
+        }
+
+    .boto-padro2 {
+        cursor: pointer;
+        border: 0;
+        width: 90%;
+        height: 40px;
+        padding: 10px;
+        background-color: #0044ffcf;
+        box-shadow: -7.3px -7.3px 7.34px rgb(0 150 255 / 80%) inset, 7.3px 7.3px 7.34px rgb(69 0 255 / 67%) inset;
+        border-radius: 14.18px;
+        overflow: hidden;
+        flex-direction: row;
+        white-space: nowrap;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .boto-padro2-1 {
+        cursor: pointer;
+        border: 0;
+        width: 90%;
+        height: 40px;
+        padding: 10px;
+        background-color: var(--sun-500);
+        box-shadow: -7.3px -7.3px 7.34px rgba(255, 214, 0, 0.74) inset, 7.3px 7.3px 7.34px rgba(255, 123, 0, 0.67) inset;
+        border-radius: 14.18px;
+        overflow: hidden;
+        flex-direction: row;
+        white-space: nowrap;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    .site-action,
+    .sites-form {
+        align-self: stretch;
+        flex-direction: column;
+    }
+
+    .site-action {
+        gap: var(--gap-6xs-1);
+        font-family: var(--font-roboto);
+    }
+
+    .sites-form {
+        gap: 7.3px;
+        max-width: 100%;
+    }
+
+    .wrapper-group-72-child {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: scale(1.399);
+    }
+
+    .wrapper-group-72,
+    .wrapper-group-72-wrapper {
+        height: 27.6px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .wrapper-group-72 {
+        width: 27.6px;
+        position: relative;
+        align-items: center;
+    }
+
+    .wrapper-group-72-wrapper {
+        align-self: stretch;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .image-container,
+    .rectangle-parent,
+    .space {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 100%;
+    }
+
+    .space {
+        flex: 1;
+        border-radius: 14.71px;
+        border: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: var(--padding-2xl);
+        flex-shrink: 0;
+        z-index: 1;
+    }
+
+    .image-container,
+    .rectangle-parent {
+        align-items: flex-start;
+    }
+
+    .rectangle-parent {
+        align-self: stretch;
+        box-shadow: 0 0 27.57px #ce721c, 0-91.9px 91.91px rgba(255, 255, 255, 0.5) inset;
+        border-radius: 14.71px;
+        background-color: var(--color-white);
+        flex-direction: row;
+        padding: 0;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        debug_commit: 1de1738;
+        z-index: 1;
+    }
+
+    .image-container {
+        flex: 1;
+        flex-direction: column;
+        gap: 36px;
+        min-width: 247px;
+    }
+
+    .frame-item {
+        align-self: stretch;
+        width: 380.5px;
+        position: relative;
+        box-shadow: 0 0 27.57px #ce721c, 0-91.9px 91.91px rgba(255, 255, 255, 0.5) inset;
+        border-radius: 14.71px;
+        background-color: var(--color-white);
+        display: none;
+        max-width: 100%;
+    }
+
+    .dados-da-empresa,
+    .preencha-com-base1 {
+        align-self: stretch;
+        position: relative;
+        line-height: 20px;
+        flex-shrink: 0;
+    }
+
+    .preencha-com-base1 {
+        height: 27.8px;
+        font-size: var(--font-size-4xs-3);
+        line-height: 11.08px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+    }
+
+    .field-label2 {
+        flex: 1;
+        position: relative;
+        line-height: 14px;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .company-label {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 9.8px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    .field-text2 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .company-input {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 var(--padding-2xs) var(--padding-8xs-2);
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .field-label3,
+    .line2 {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .line2 {
+        height: 0.7px;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .field-label3 {
+        line-height: 14px;
+    }
+
+    .company-description,
+    .company-field {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .company-field {
+        gap: var(--gap-12xs-7);
+    }
+
+    .company-description {
+        padding: 0 0 var(--padding-3xs-7);
+        box-sizing: border-box;
+        gap: 1.3px;
+        max-width: 100%;
+        flex-shrink: 0;
+        font-size: var(--font-size-3xs-7);
+    }
+
+    .field-text3 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .company-value {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 var(--padding-2xs) var(--padding-8xs-1);
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .line3 {
+        align-self: stretch;
+        height: 0.7px;
+        position: relative;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .company-form {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-11xs-4);
+        max-width: 100%;
+    }
+
+    .contatos,
+    .enviaremos-boletos-informae {
+        align-self: stretch;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .enviaremos-boletos-informae {
+        height: 33.1px;
+        font-size: var(--font-size-4xs-3);
+        line-height: 11.08px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .field-label4 {
+        flex: 1;
+        position: relative;
+        line-height: 14px;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .contact-label {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 9.6px;
+        box-sizing: border-box;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+
+    .icon {
+        height: 16.6px;
+        width: 16.6px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .field-text4 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+
+    .icon-field-pair {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-8xs-2);
+        gap: var(--gap-xs-1);
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .field-label5,
+    .line4 {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .line4 {
+        height: 0.7px;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .field-label5 {
+        line-height: 14px;
+    }
+
+    .contact-field {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-3xs-7);
+        gap: var(--gap-12xs-7);
+        flex-shrink: 0;
+    }
+
+    .icon1 {
+        height: 16.6px;
+        width: 16.6px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .field-text5 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+        white-space: nowrap;
+    }
+
+    .icon-field-pair1 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0 0 var(--padding-8xs-1);
+        gap: var(--gap-xs-1);
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .line5 {
+        align-self: stretch;
+        height: 0.7px;
+        position: relative;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .contact-info {
+        font-size: var(--font-size-3xs-7);
+    }
+
+    .contact-info,
+    .contatos-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-11xs-4);
+        max-width: 100%;
+    }
+
+    .plano-escolhido {
+        line-height: 20px;
+    }
+
+    .escolha-o-plano,
+    .field-label6,
+    .plano-escolhido {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .escolha-o-plano {
+        height: 37.4px;
+        font-size: var(--font-size-4xs-3);
+        line-height: 11.08px;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .field-label6 {
+        line-height: 14px;
+    }
+
+    .field-text6 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .icon2 {
+        height: 16.6px;
+        width: 16.6px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .plan-field,
+    .plan-input,
+    .plan-value {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+    }
+
+    .plan-value {
+        flex: 1;
+        flex-direction: row;
+        gap: var(--gap-xs-1);
+    }
+
+    .plan-field,
+    .plan-input {
+        align-self: stretch;
+    }
+
+    .plan-input {
+        flex-direction: row;
+        padding: 0 0 0 var(--padding-2xs);
+        box-sizing: border-box;
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .plan-field {
+        flex-direction: column;
+        gap: var(--gap-xs-1);
+        flex-shrink: 0;
+    }
+
+    .field-label7,
+    .line6 {
+        align-self: stretch;
+        position: relative;
+    }
+
+    .line6 {
+        height: 0.7px;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .field-label7 {
+        line-height: 14px;
+    }
+
+    .payment-input {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--gap-12xs-7);
+    }
+
+    .field-text7 {
+        flex: 1;
+        position: relative;
+        line-height: 20px;
+    }
+
+    .icon3 {
+        height: 16.6px;
+        width: 16.6px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .payment-field,
+    .payment-value {
+        display: flex;
+        justify-content: flex-start;
+        gap: var(--gap-xs-1);
+        max-width: 100%;
+    }
+
+    .payment-value {
+        width: 325.1px;
+        flex-direction: row;
+        align-items: flex-start;
+        font-size: var(--font-size-smi-5);
+        font-family: var(--font-roboto);
+    }
+
+    .payment-field {
+        align-self: stretch;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-shrink: 0;
+    }
+
+    .line7 {
+        align-self: stretch;
+        height: 0.7px;
+        position: relative;
+        border-top: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+    }
+
+    .plan-form,
+    .plano-escolhido-parent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 100%;
+    }
+
+    .plan-form {
+        gap: 5.5px;
+        font-size: var(--font-size-3xs-7);
+    }
+
+    .plano-escolhido-parent {
+        gap: var(--gap-11xs-4);
+    }
+
+    .rectangle-group,
+    .space1 {
+        flex: 1;
+        border-radius: 14.71px;
+        justify-content: flex-start;
+    }
+
+    .space1 {
+        border: 0.7px solid var(--color-chocolate-100);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--padding-2xl) var(--padding-2xl) var(--padding-xl) 22px;
+        gap: 35.2px;
+        max-width: 100%;
+        z-index: 2;
+    }
+
+    .rectangle-group {
+        box-shadow: 0 0 27.57px #ce721c, 0-91.9px 91.91px rgba(255, 255, 255, 0.5) inset;
+        background-color: var(--color-white);
+        min-width: 247px;
+        z-index: 1;
+        font-size: var(--font-size-sm-9);
+    }
+
+    .content,
+    .image-container-parent,
+    .rectangle-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .image-container-parent {
+        width: 40%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 41.5px;
+        text-align: left;
+        font-size: var(--font-size-smi-5);
+        color: var(--color-chocolate-100);
+        font-family: var(--font-poppins);
+    }
+
+    .content {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .macbook-air-1-item {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        display: none;
+        z-index: 3;
+    }
+
+    .boto-sem-fundo {
+        display: inline-flex;
+        align-items: flex-start;
+        position: absolute;
+        top: 29px;
+        right: 5%;
+    }
+
+    .bot-o-wrapper {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.84px;
+        padding: 11.89px 39.13px;
+        position: absolute;
+        flex: 0 0 auto;
+        border-radius: 22.25px;
+        overflow: hidden;
+        border: 2.3px solid;
+        border-color: #ffffff54;
+        background-color: var(--sun-500);
+        box-shadow: -7.3px -7.3px 7.34px rgba(255, 214, 0, 0.74) inset, 7.3px 7.3px 7.34px rgba(255, 123, 0, 0.67) inset;
+        right: 5%;
+        top: 5%;
+    }
+
+    .bot-o {
+        position: relative;
+        width: fit-content;
+        margin-top: -2.3px;
+        font-family: "Outfit-Bold", Helvetica;
+        font-weight: 700;
+        color: #fff;
+        font-size: 15.9px;
+        letter-spacing: 0;
+        line-height: normal;
+    }
+
+    .macbook-air-1 {
+        height: 100%;
+        width: 100%;
+        background-color: var(--color-white);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        gap: 44.6px;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+
+    body {
+        margin: 0;
+        line-height: normal;
+    }
+
+    :root {
+        /* fonts */
+        --font-roboto: Roboto;
+        --font-poppins: Poppins;
+        --font-outfit: Outfit;
+        /* font sizes */
+        --font-size-smi-5: 12.5px;
+        --font-size-3xs-7: 9.7px;
+        --font-size-4xs-3: 8.3px;
+        --font-size-sm-9: 13.9px;
+        --font-size-base-8: 15.8px;
+        /* Colors */
+        --color-white: #fff;
+        --color-chocolate-100: #d57300;
+        --sun-500: #ffac00;
+        --sun-50: #fffdea;
+        --sun-400: #ffce1b;
+        /* Gaps */
+        --gap-lg: 18px;
+        --gap-11xs-4: 1.4px;
+        --gap-xs-1: 11.1px;
+        --gap-12xs-7: 0.7px;
+        --gap-6xs-1: 6.1px;
+        --gap-xl: 20px;
+        /* Paddings */
+        --padding-2xl: 21px;
+        --padding-xl: 20px;
+        --padding-2xs: 11px;
+        --padding-8xs-1: 4.1px;
+        --padding-3xs-7: 9.7px;
+        --padding-8xs-2: 4.2px;
+        --padding-4xs: 9px;
+        --padding-18xl: 37px;
+        /* Border radiuses */
+        --br-mini-7: 14.7px;
+        --br-3xl-2: 22.2px;
+    }
+
+</style>
+<body>
+    <div class="macbook-air-1">
+        <div class="macbook-air-1-child">
+            <header class="header">
+                <div class="navigation">
+                    <img class="heatwisewl-1-icon"
+                         loading="lazy"
+                         alt=""
+                         src="/heatwise.png" />
+
+                    <div class="ttulo-h1-wrapper">
+                        <div class="ttulo-h1">
+                        </div>
+                    </div>
+                    <div class="boto-sem-fundo">
+                        <a class="bot-o-wrapper" asp-controller="Empresas" asp-action="Create"><div class="bot-o">Voltar</div></a>
+                    </div>
+                </div>
+
+            </header>
+            <main class="content">
+                <section class="image-container-parent">
+                    <div class="image-container">
+                        <div class="defaultimage-1-parent">
+                            <img class="defaultimage-1-icon"
+                                 loading="lazy"
+                                 alt=""
+                                 src="/defaultimage1.png" />
+
+                            <div class="frame-wrapper">
+                                <div class="button-row-parent">
+                                    <div class="button-row">
+                                    </div>
+                                    <button class="boto-sem-fundo-laranja4" data-id="@Model.Id" onclick="deleteProfile(this)">
+                                        <div class="boto-sem-fundo-laranja5">
+                                            <b class="boto2">Excluir Perfil</b>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rectangle-parent">
+                            <div class="frame-child"></div>
+                            <div class="space">
+                                <div class="sites-form">
+                                    <b class="meus-sites">Meus Sites</b>
+                                    <div class="preencha-com-base">
+                                        preencha com base nos dados da empresa
+                                    </div>
+                                    <div class="site-label">
+                                        <div class="field-label">Nome do Site</div>
+                                    </div>
+                                    <div class="site-field">
+                                        <div class="site-input">
+                                            <div class="field-text">exemploempresa</div>
+                                        </div>
+                                        <div class="line"></div>
+                                        <div class="field-label1">Endereço do Site</div>
+                                    </div>
+                                    <div class="site-action">
+                                        <div class="action-button">
+                                            <div class="field-text1"> XX. XXX. XXX/0001-XX</div>
+                                        </div>
+                                        <div class="line1"></div>
+                                        <button class="boto-padro2" id="botoPadro">
+                                            <b class="boto3">Cadastrar Site</b>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rectangle-group">
+                        <div class="frame-item"></div>
+                        <div class="space1">
+                            <form asp-action="Deatils" style="width: 100%;">
+                                <div class="subhead">
+                                    <div class="text-wrapper-2">Dados da empresa</div>
+                                    <p class="p">Preencha com base nos dados da empresa</p>
+                                    <div class="field">
+                                        <div class="field-label">Nome da empresa</div>
+                                        <div class="div-2">
+                                            <input asp-for="Nome" type="text" name="Nome" required class="field-text">
+                                            <span asp-validation-for="Nome" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-label">CNPJ</div>
+                                        <div class="div-2">
+                                            <input asp-for="CNPJ" type="text" name="CNPJ" required class="field-text">
+                                            <span asp-validation-for="CNPJ" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subhead">
+                                    <div class="text-wrapper-2">Contatos</div>
+                                    <p class="p">Enviaremos boletos, informações úteis e códigos nestes contatos</p>
+                                    <div class="field">
+                                        <div class="field-label">Email</div>
+                                        <div class="div-2">
+                                            <input asp-for="Email" type="email" name="Email" required class="field-text">
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-label">Telefone</div>
+                                        <div class="div-2">
+                                            <input asp-for="Telefone" type="tel" name="Telefone" required class="field-text">
+                                            <span asp-validation-for="Telefone" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subhead">
+                                    <div class="text-wrapper-2">Escolha do Plano</div>
+                                    <p class="p">Escolha o plano e forma de pagamento</p>
+                                    <div class="field">
+                                        <div class="field-label">Plano</div>
+                                        <div class="div-2">
+                                            <select asp-for="PlanoId" class="form-control" asp-items="ViewBag.PlanoId"></select>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="field-label">Forma de Pagamento</div>
+                                        <div class="div-2">
+                                            <select asp-for="FormaPagamento" class="field-text" asp-items="@(new SelectList(Enum.GetValues(typeof(FormaPagamento))))"></select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <div class="macbook-air-1-item"></div>
+        </div>
+    </div>
+    @section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }
+
+    <script>
+        var botoPadro = document.getElementById("botoPadro");
+        if (botoPadro) {
+            botoPadro.addEventListener("click", function (e) {
+                window.location.href = '/Sites/Create';
+            });
+        }
+
+        function deleteProfile(button) {
+            var profileId = button.getAttribute('data-id');
+
+            if (confirm('Tem certeza que deseja excluir este perfil?')) {
+                fetch(`/Empresas/Delete/${profileId}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Perfil excluído com sucesso!');
+                            window.location.href = '/';
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Erro ao excluir o perfil.');
+                    });
+            }
+        }
+
+        function editProfile(button) {
+            var profileId = button.getAttribute('data-id');
+            if (confirm('Tem certeza que deseja editar este perfil?')) {
+                // Obtendo os valores dos campos do formulário
+                var formData = {
+                    Id: profileId,
+                    Nome: document.querySelector('input[name="Nome"]').value,
+                    CNPJ: document.querySelector('input[name="CNPJ"]').value,
+                    Email: document.querySelector('input[name="Email"]').value,
+                    Telefone: document.querySelector('input[name="Telefone"]').value,
+                    PlanoId: document.querySelector('select[name="PlanoId"]').value,
+                    FormaPagamento: document.querySelector('select[name="FormaPagamento"]').value
+                    // Adicione outros campos do formulário conforme necessário
+                };
+
+                // Aqui vamos enviar uma requisição fetch para editar o perfil
+                fetch(`/Empresas/Edit/${profileId}`, {
+                    method: 'POST', // Use POST, pois estamos enviando dados
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest', // Para validar o token anti-falsificação
+                    },
+                    body: JSON.stringify(formData), // Convertendo os dados para JSON
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Perfil editado com sucesso!');
+                            // Recarregar a página após a edição bem-sucedida
+                            window.location.reload();
+                        } else {
+                            alert('Erro ao editar o perfil.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro:', error);
+                        alert('Erro ao editar o perfil.');
+                    });
+            }
+        }
+    </script>
+</body>
+</html>

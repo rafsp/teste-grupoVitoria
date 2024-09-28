@@ -1,0 +1,6 @@
+@HeatWise_Sprint_2.Net_HostAddress = http://localhost:5120
+
+GET {{HeatWise_Sprint_2.Net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
