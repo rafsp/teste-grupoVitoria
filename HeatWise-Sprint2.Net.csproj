@@ -8,6 +8,7 @@
     <UserSecretsId>c02bcb0c-738a-41dc-9c7e-c4e7d20cfcfd</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+    <StartupObject>HeatWise_Sprint_2.Net.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
